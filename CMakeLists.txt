@@ -7,8 +7,18 @@ add_definitions(-std=c++11)
 set(CXX_FLAGS "-Wall")
 set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
 
-set(sources src/main.cpp)
+set(sources
+    src/main.cpp
+    src/Map.cpp
+    src/Predictor.cpp
+    src/PathPlanner.cpp
+    src/NeighborCars.cpp
+    src/BehavioralPlanner.cpp
+    src/TrajectoryGenerator.cpp
+    src/SpeedEstimation.cpp)
 
+#include_directories(uWebSockets/include)
+#link_directories(/Users/gss/Work/programming/udacity/self_driving_car/module3/CarND-Path-Planning-Project/uWebSockets)
 
 if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin") 
 
